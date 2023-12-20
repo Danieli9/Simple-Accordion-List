@@ -1,0 +1,43 @@
+.accordion-content {
+    background-color: #616161;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+    padding: 0 15px;
+    color: #FFF;
+    font-size: 17px;
+}
+
+.accordion-header {
+    background-color: #303030;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 18px 18px 18px 50px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    position: relative;
+}
+.accordion-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease; 
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><g opacity="0.3"><path d="M13.333 10.666L18.6663 15.9993L13.333 21.3327" stroke="white" stroke-width="2.46154" stroke-linecap="round" stroke-linejoin="round"/></g></svg>');
+}
+
+.accordion-header.active::before {
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion-header:hover {
+    background-color: #ddd;
+}
+
