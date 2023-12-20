@@ -1,0 +1,1 @@
+A simple accordion list is a good starting point for further development.
